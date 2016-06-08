@@ -17,6 +17,7 @@ npm install @angularclass/match-control --save
     ...ANGULARCLASS_MATCH_CONTROL_DIRECTIVES // [ AcMatchControlValidator ]
   ]
 });
+export class Account {}
 ```
 ```html
 <input ngControl="newPasswordAgain" ac-match-control="newPassword"> <!-- invalidMatch -->
