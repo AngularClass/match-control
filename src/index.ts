@@ -13,7 +13,7 @@ import { NgForm, ControlGroup, AbstractControl, NG_VALIDATORS, Validator } from 
 export class AcMatchControlValidator implements Validator {
   constructor(
     @Host() public formDir: NgForm,
-    @Attribute('match-control') public matchControl: string) {
+    @Attribute('ac-match-control') public matchControl: string) {
   }
   validate(c: AbstractControl): {[key: string]: any} {
     var form: ControlGroup = this.formDir.form;
