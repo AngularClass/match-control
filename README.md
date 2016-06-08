@@ -1,5 +1,5 @@
 # AngularClass Match Control
-> A component that matches two controls. Most commonly used for matching passwords
+> Angular 2 Match Control: match two controls. Useful for changing passwords where you need to have two passwords matched
 
 # Install
 ```bash
@@ -11,9 +11,12 @@ npm install @angularclass/match-control --save
 
 # API
 ```typescript
-bootstrap(App, [
-  ...ANGULARCLASS_MATCH_CONTROL_DIRECTIVES // [ AcMatchControlValidator ]
-]);
+@Component({
+  selector: 'account',
+  directives: [
+    ...ANGULARCLASS_MATCH_CONTROL_DIRECTIVES // [ AcMatchControlValidator ]
+  ]
+});
 ```
 ```html
 <input ngControl="newPasswordAgain" ac-match-control="newPassword"> <!-- invalidMatch -->
