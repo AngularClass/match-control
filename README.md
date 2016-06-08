@@ -16,7 +16,7 @@ npm install @angularclass/match-control --save
   directives: [
     ...ANGULARCLASS_MATCH_CONTROL_DIRECTIVES // [ AcMatchControlValidator ]
   ]
-});
+})
 export class Account {}
 ```
 ```html
@@ -26,6 +26,7 @@ export class Account {}
 
 # example
 > combined with `@angularclass/form-errors`
+
 ```typescript
 import { Component }  from '@angular/core';
 import { FORM_PROVIDERS, FORM_DIRECTIVES } from '@angular/common';
@@ -69,7 +70,10 @@ import {ANGULARCLASS_MATCH_CONTROL_DIRECTIVES} from '@angularclass/match-control
         <input ngControl="newPasswordAgain" ac-match-control="newPassword">
       </label>
 
-      <ac-form-errors control="newPasswordAgain" [errors]="{'required': 'password is required', 'invalidMatch': 'your passwords must match'}"></ac-form-errors>
+      <ac-form-errors control="newPasswordAgain" [errors]="{
+        'required': 'password is required',
+        'invalidMatch': 'your passwords must match'
+      }"></ac-form-errors>
 
       </div>
 
@@ -95,6 +99,7 @@ export class AccountEditComponent {
 
 ### todo
 - [ ] todo
+
 
 ___
 
