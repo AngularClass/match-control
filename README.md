@@ -1,6 +1,9 @@
 # AngularClass Match Control
 > Angular 2 Match Control: match two controls. Useful for changing passwords where you need to have two passwords matched
 
+1.x.x uses the old form api   
+2.x.x uses the new forms api
+
 # Install
 ```bash
 npm install @angularclass/match-control --save
