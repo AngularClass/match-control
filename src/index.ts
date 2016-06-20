@@ -1,5 +1,5 @@
 import { Directive, Host, Attribute, forwardRef }  from '@angular/core';
-import { NgForm, ControlGroup, AbstractControl, NG_VALIDATORS, Validator } from '@angular/common';
+import { NgForm, NG_VALIDATORS, Validator } from '@angular/forms';
 
 @Directive({
   selector: '[ac-match-control]',
@@ -15,8 +15,8 @@ export class AcMatchControlValidator implements Validator {
     @Host() public formDir: NgForm,
     @Attribute('ac-match-control') public matchControl: string) {
   }
-  validate(c: AbstractControl): {[key: string]: any} {
-    var form: ControlGroup = this.formDir.form;
+  validate(c: any): {[key: string]: any} {
+    var form = this.formDir.form;
     var control = form.find(this.matchControl);
     if (control !== undefined && control !== null && control.touched) {
       if (control.value !== c.value) {
