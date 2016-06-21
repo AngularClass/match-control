@@ -63,13 +63,13 @@ import {ANGULARCLASS_MATCH_CONTROL_DIRECTIVES} from '@angularclass/match-control
 
       <div>
         <label>
-           password:
+          Password:
           <input ngControl="newPassword" required>
         </label>
         <ac-form-errors control="newPassword" [errors]="{'required': 'password is required'}"></ac-form-errors>
 
       <label>
-        Username:
+        Password Again:
         <input ngControl="newPasswordAgain" ac-match-control="newPassword">
       </label>
 
