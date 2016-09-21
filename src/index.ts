@@ -17,7 +17,7 @@ export class AcMatchControlValidator implements Validator {
   }
   validate(c: any): {[key: string]: any} {
     var form = this.formDir.form;
-    var control = form.find(this.matchControl);
+    var control = form.get(this.matchControl);
     if (control !== undefined && control !== null && control.touched) {
       if (control.value !== c.value) {
         return {'invalidMatch': true};
